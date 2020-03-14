@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  width: 100vw;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: whitesmoke;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header nav h1 {
+  padding-top: 5px;
+}
+
+header nav .theme {
+  background-color: #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 25px;
+}
+
+header nav .theme p {
+  font-size: 12px;
+}
+
+.data {
+  height: 100vh;
+  min-height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.data .data-angka {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.data .data-angka div {
+  text-align: center;
+  margin-left: 10px;
+  background-color: #292d3e;
+  padding: 1rem 0;
+  border: none;
+  border-radius: .25rem;
+  min-width: 200px;
+  cursor: default;
+}
+
+.data .data-angka div h3 {
+  font-size: 2rem;
+}
+
+.data .data-angka div p {
+  font-size: 4rem;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.data .tanggal-data {
+  padding-top: 20px;
+}
+
+.data #konfirmasi h3 {
+  color: #d6d636;
+}
+
+.data #meninggal h3 {
+  color: #ca2121;
+}
+
+.data #sembuh h3 {
+  color: #7fc935;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #bbbbbb;
+  padding: 20px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer .person {
+  margin-left: 10vw;
+}
+
+footer .sumber {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10vw;
+}
+
+footer .info-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+footer .info-me p {
+  margin-left: 20px;
+}
+
+.dark {
+  color: white;
+}
+
+.dark header {
+  background-color: #565656;
+}
+
+.dark header .theme {
+  background-color: #1a1a1a;
+}
+
+.dark .data {
+  background-color: #1a1a1a;
+}
+
+.dark footer {
+  background-color: #565656;
+}
+
+@media (max-width: 800px) {
+  .data-angka {
+    padding-top: 3rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .data-angka div {
+    margin-top: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

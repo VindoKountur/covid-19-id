@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cek Jumlah Konfirmasi, Kematian dan Kesembuhan Covid-19 Di Indonesia"/>
+    <title>Covid-19 di Indonesia</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body id="tema">
+    <header>
+      <nav>
+        <h1>Status Covid-19 di indonesia</h1>
+        <div class="theme" onclick="changeTheme()">
+          <img
+            id="gambar-tema"
+            height="35"
+            src="./img/sun.svg"
+          />
+          <p><strong>Change Theme</strong></p>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="data">
+        <div class="data-angka">
+          <div id="konfirmasi">
+            <h3>Konfirmasi</h3>
+            <p id="value-konfirmasi">0</p>
+          </div>
+          <div id="meninggal">
+            <h3>Meninggal</h3>
+            <p id="value-meninggal">0</p>
+          </div>
+          <div id="sembuh">
+            <h3>Sembuh</h3>
+            <p id="value-sembuh">0</p>
+          </div>
+        </div>
+        <span class="tanggal-data"
+          ><strong
+            >Tanggal Terakhir Update Data : <span id="value-tanggal"></span></strong
+        ></span>
+      </section>
+      <!-- <section class="grafik">
+      <h1>tes</h1>
+    </section> -->
+      <footer>
+        <div class="person">
+          <h3>Find Me</h3>
+          <div class="info-me">
+            <img id="gitIcon" src="./img/GitHub-Mark-32px.png" alt="Github">
+            <p><a href="https://github.com/vindokountur">VindoKountur</a></p>
+          </div>
+        </div>
+        <div class="sumber">
+          <p>Data API dari  </p>
+          <img
+              style="margin-left: 10px;"
+              height="32"
+              width="32"
+              src="https://www.obgyn.cam.ac.uk/files/2014/10/twitter-icon-300x300.png"
+              alt="twit"
+          /> 
+          <a href="http://twitter.com/mathdroid">@mathdroid</a>  
+        </div>
+      </footer>
+    </main>
+    <script defer src="./main.js"></script>
+  </body>
+</html>

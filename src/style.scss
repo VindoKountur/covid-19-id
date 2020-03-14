@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Variable
+$black-board : #565656;
+$box-color : #292d3e;
+// ===
+
+header {
+  width: 100vw;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: whitesmoke;
+  nav {
+    h1 {
+      padding-top: 5px;
+    }
+    display: flex;
+    justify-content: space-around;
+    .theme {
+      background-color: #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      padding: 5px 8px;
+      border: none;
+      border-radius: 25px;
+      p{
+        font-size: 12px;
+      }
+    }
+  }
+
+  
+}
+.data {
+  
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: .1s;
+  .data-angka {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+      text-align: center;
+      margin-left: 10px;
+      background-color: $box-color;
+      padding: 1rem 0;
+      border: none;
+      border-radius: .25rem;
+      min-width: 200px;
+      cursor: default;
+      h3 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 4rem;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        color: white;
+      }
+    }
+  }
+
+  .tanggal-data {
+    padding-top: 20px;
+  }
+  
+  #konfirmasi {
+    h3 {
+      color: #d6d636;
+    }
+  }
+  #meninggal {
+    h3 {
+      color: #ca2121;
+    }
+  }
+  #sembuh {
+    h3 {
+      color: #7fc935;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(187, 187, 187);
+  padding: 20px 0;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .person {
+    margin-left: 10vw;
+  }
+  .sumber {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 10vw;
+  }
+
+  .info-me {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    p {
+      margin-left: 20px;
+    }
+  }
+}
+
+.dark {
+  color: white;
+  header {
+    background-color: $black-board;
+    .theme {
+      background-color: rgb(26, 26, 26);
+    }
+  }
+  .data {
+    background-color: rgb(26, 26, 26);
+  }
+  footer {
+    background-color: $black-board;
+  }
+}
+
+@media (max-width: 800px) {
+  .data-angka {
+    padding-top: 3rem;
+    flex-direction: column;
+    div {
+      margin-top: 10px;
+    }
+  }
+}
