@@ -13,11 +13,11 @@ const url = "https://covid19.mathdro.id/api/countries/ID";
 
 let theme = true;
 let moon = 'https://img.icons8.com/plasticine/100/000000/crescent-moon.png';
-let sun = "./img/sun.svg";
+let sun = "./src/img/sun.svg";
 
 let gitIcon = {
-  dark : './img/GitHub-Mark-32px.png',
-  light : './img/GitHub-Mark-Light-32px.png'
+  dark : './src/img/GitHub-Mark-32px.png',
+  light : './src/img/GitHub-Mark-Light-32px.png'
 };
 
 let changeTheme = () => {
