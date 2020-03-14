@@ -6,6 +6,7 @@ Ada tambahan light/dark theme biar sedikit menarik :smiley:
 
 # Tech
 Vanila JS
+
 Scss
 
 # Akses
