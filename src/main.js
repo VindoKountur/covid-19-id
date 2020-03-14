@@ -7,7 +7,8 @@ const elements = {
   tanggal : document.querySelector("#value-tanggal"),
   tema : document.querySelector("#tema"),
   gambarTema : document.querySelector("#gambar-tema"),
-  gitIcon : document.querySelector("#gitIcon")
+  gitIcon : document.querySelector("#gitIcon"),
+  changeThemeTxt : document.querySelector("#changeThemeTxt")
 };
 const url = "https://covid19.mathdro.id/api/countries/ID";
 

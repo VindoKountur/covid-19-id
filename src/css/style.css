@@ -10,6 +10,8 @@
 header {
   width: 100vw;
   padding: 1rem 0;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
   position: fixed;
   top: 0;
   left: 0;
@@ -20,8 +22,9 @@ header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 header nav h1 {
@@ -51,7 +54,6 @@ header nav .theme p {
 
 .data {
   height: 100vh;
-  min-height: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,6 +188,16 @@ footer .info-me p {
 }
 
 @media (max-width: 800px) {
+  header #changeThemeTxt {
+    display: none;
+  }
+  header h1 {
+    font-size: 1.2rem;
+  }
+  .data {
+    padding: 230px 0;
+    min-height: 800px;
+  }
   .data-angka {
     padding-top: 3rem;
     -webkit-box-orient: vertical;
