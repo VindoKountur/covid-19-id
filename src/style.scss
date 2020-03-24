@@ -9,10 +9,12 @@
 // Variable
 $black-board : #565656;
 $box-color : #292d3e;
+$box-shadow : 0 10px 20px rgba(0,0,0,0.19), 0px 4px 15px 0px rgba(0,0,0,0.23);
 // ===
 
 header {
   width: 100vw;
+  z-index: 100;
   padding: 1rem 0;
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,.25);
   position: fixed;
@@ -67,8 +69,7 @@ header {
       }
       p {
         font-size: 4rem;
-        padding-top: 30px;
-        padding-bottom: 10px;
+        padding: 0px 1rem;
         color: white;
       }
     }
@@ -95,6 +96,56 @@ header {
   }
 }
 
+.news-container {
+  width: 90vw;
+  margin: auto;
+
+  h2 {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .news {
+    margin: 20px 0;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    a {text-decoration: none; color: inherit;}
+    .news-box {
+      box-shadow: $box-shadow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 35vw;
+      margin: 10px auto;
+      border-radius: 5px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: .3s ease;
+      &:hover {
+        transform: scale(1.025);
+      }
+      .news-image {
+        background-color: green;
+        display: flex;
+        justify-content: center;
+        img {
+          max-height: 100px;
+          max-width: 100px;
+          min-height: 100px;
+          min-width: 100px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .news-content {
+        padding: 0 15px;
+        background-color: inherit;
+      }
+    }
+  }
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -110,8 +161,12 @@ footer {
   .sumber {
     margin-top: 20px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     margin-left: 10vw;
+    .dataCovid {
+      display: flex;
+      align-items: center;
+    }
   }
 
   .info-me {
@@ -152,12 +207,35 @@ footer {
   .data {
     height: auto;
     padding: 2rem 0;
+
+  }
+  .news-container {
+    .news {
+      .news-box {
+        max-width: 90vw;
+        .news-image {
+          img {
+            max-width: 120px;
+          }
+        }
+      }
+    }
   }
   .data-angka {
     padding-top: 3rem;
     flex-direction: column;
     div {
-      margin-top: 10px;
+      margin-top: 4px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .news-container {
+    .news {
+      .news-box {
+        max-width: 90vw;
+      }
     }
   }
 }

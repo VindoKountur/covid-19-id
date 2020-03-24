@@ -2,7 +2,8 @@ const elements = {
   values: {
     konfirmasi: document.querySelector("#value-konfirmasi"),
     meninggal: document.querySelector("#value-meninggal"),
-    sembuh: document.querySelector("#value-sembuh")
+    sembuh: document.querySelector("#value-sembuh"),
+    news: document.querySelector("#news")
   },
   tanggal : document.querySelector("#value-tanggal"),
   tema : document.querySelector("#tema"),
@@ -11,6 +12,7 @@ const elements = {
   changeThemeTxt : document.querySelector("#changeThemeTxt")
 };
 const url = "https://covid19.mathdro.id/api/countries/ID";
+const urlNews = "https://newsapi.org/v2/top-headlines?q=covid-19&q=corona&country=id&apiKey=683c906f8e0046b3a3f101d7de47acf9";
 
 let theme = true;
 let moon = 'https://img.icons8.com/plasticine/100/000000/crescent-moon.png';
@@ -26,12 +28,10 @@ let changeTheme = () => {
     elements.tema.className = 'dark';
     elements.gambarTema.src = moon;
     elements.gitIcon.src = gitIcon.light;
-    console.log(`Dark theme`);  
   } else {
     elements.tema.classList.remove('dark');
     elements.gambarTema.src = sun;
     elements.gitIcon.src = gitIcon.dark;
-    console.log(`Remove dark`);
   }
   theme = !theme;
 }
@@ -51,7 +51,6 @@ let conversiBulanIndo = (value) => {
     '11' : 'November',
     '12' : 'Desember'
   }
-  console.log(bilang[`${value}`]);
   return bilang[value];
 }
 
@@ -69,6 +68,25 @@ let conversiTanggal = (value) => {
   
 }
 
+const createNews = (data) => {
+  data.articles.map((article, index) => {
+    const createDiv = document.createElement('div');
+    createDiv.innerHTML = `
+    <a href=${url}>
+      <div class="news-box">
+        <div class="news-image">
+          <img src=${article.urlToImage} alt="Gambar">
+        </div>
+        <div class="news-content">
+          <h3>${article.title}</h3>
+        </div>
+      </div>
+    </a>`;
+    elements.values.news.appendChild(createDiv);
+    console.log(index);
+  })
+}
+
 let getValue = () => {
   fetch(url).then(res => res.json()).then(data => {
     elements.values.konfirmasi.textContent = data.confirmed.value;
@@ -78,5 +96,11 @@ let getValue = () => {
   });
 }
 
-getValue();
+let getNews = () => {
+  fetch(urlNews).then(res => res.json()).then(data => {
+    createNews(data);
+  });
+}
 
+getValue();
+getNews();
