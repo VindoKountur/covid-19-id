@@ -72,7 +72,7 @@ const createNews = (data) => {
   data.articles.map((article, index) => {
     const createDiv = document.createElement('div');
     createDiv.innerHTML = `
-    <a href=${url}>
+    <a href=${article.url}>
       <div class="news-box">
         <div class="news-image">
           <img src=${article.urlToImage} alt="Gambar">
