@@ -4,13 +4,15 @@ Disini ditampilkan data jumlah yang terkonfirmasi terkena covid-19, yang telah m
 
 Ada tambahan light/dark theme biar sedikit menarik :smiley:
 
-# Tech
-Vanila JS
+Serta berita mengenai covid-19
 
-Scss
+# Tech
+1. Vanila JS
+2. Scss
 
 # Akses
 [https://vindokountur.github.io/covid-19-id/](https://vindokountur.github.io/covid-19-id/)
 
-# sumber API
-[@mathdroid](http://twitter.com/mathdroid)
+# sumber data
+API Data Covid-19 [@mathdroid](http://twitter.com/mathdroid)
+News [newsapi.org](https://newsapi.org)
