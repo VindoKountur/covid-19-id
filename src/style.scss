@@ -97,7 +97,6 @@ header {
 }
 
 .news-container {
-  width: 90vw;
   margin: auto;
 
   h2 {
@@ -106,7 +105,7 @@ header {
   }
 
   .news {
-    margin: 20px 0;
+    padding: 20px 0;
     justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
@@ -183,12 +182,12 @@ footer {
   color: white;
   header {
     background-color: $black-board;
-    .theme {
-      background-color: rgb(26, 26, 26);
-    }
   }
-  .data {
+  .data, .theme, .news-container {
     background-color: rgb(26, 26, 26);
+  }
+  .news-box {
+    background-color: $box-color;
   }
   footer {
     background-color: $black-board;
@@ -213,6 +212,7 @@ footer {
     .news {
       .news-box {
         max-width: 90vw;
+        font-size: .8rem;
         .news-image {
           img {
             max-width: 120px;

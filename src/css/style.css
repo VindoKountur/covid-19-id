@@ -122,7 +122,6 @@ header nav .theme p {
 }
 
 .news-container {
-  width: 90vw;
   margin: auto;
 }
 
@@ -132,7 +131,7 @@ header nav .theme p {
 }
 
 .news-container .news {
-  margin: 20px 0;
+  padding: 20px 0;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -263,12 +262,12 @@ footer .info-me p {
   background-color: #565656;
 }
 
-.dark header .theme {
+.dark .data, .dark .theme, .dark .news-container {
   background-color: #1a1a1a;
 }
 
-.dark .data {
-  background-color: #1a1a1a;
+.dark .news-box {
+  background-color: #292d3e;
 }
 
 .dark footer {
@@ -288,6 +287,7 @@ footer .info-me p {
   }
   .news-container .news .news-box {
     max-width: 90vw;
+    font-size: .8rem;
   }
   .news-container .news .news-box .news-image img {
     max-width: 120px;
