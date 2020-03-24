@@ -69,7 +69,7 @@ let conversiTanggal = (value) => {
 }
 
 const createNews = (data) => {
-  data.articles.map((article, index) => {
+  data.articles.map(article => {
     const createDiv = document.createElement('div');
     createDiv.innerHTML = `
     <a href=${article.url}>
@@ -83,7 +83,6 @@ const createNews = (data) => {
       </div>
     </a>`;
     elements.values.news.appendChild(createDiv);
-    console.log(index);
   })
 }
 
