@@ -12,7 +12,7 @@ const elements = {
   changeThemeTxt : document.querySelector("#changeThemeTxt")
 };
 const url = "https://covid19.mathdro.id/api/countries/ID";
-const urlNews = "https://newsapi.org/v2/top-headlines?q=covid-19&q=corona&country=id&apiKey=683c906f8e0046b3a3f101d7de47acf9";
+const urlNews = "https://make-life-easier.herokuapp.com/api/covidnews";
 
 let theme = true;
 let moon = 'https://img.icons8.com/plasticine/100/000000/crescent-moon.png';
@@ -69,7 +69,7 @@ let conversiTanggal = (value) => {
 }
 
 const createNews = (data) => {
-  data.articles.map(article => {
+  data.news.map(article => {
     const createDiv = document.createElement('div');
     createDiv.innerHTML = `
     <a href=${article.url}>
